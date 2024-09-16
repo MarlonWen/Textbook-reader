@@ -1,0 +1,9 @@
+{% load static %}
+<link href="{% static 'home/styles.css' %}" rel="stylesheet">
+<a href="{% url 'album_list' %}">Back</a>
+<h1>Create New Album</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>

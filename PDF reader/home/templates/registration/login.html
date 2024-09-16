@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="{% static 'home/styles.css' %}" rel="stylesheet">
+    </head>
+    <body id = center>
+        <h1 id = register>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class = green-button type="submit">Log in</button>
+        </form>
+    </body>
+</html>
