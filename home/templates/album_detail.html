@@ -1,0 +1,30 @@
+{% load static %}
+
+<h1>{{ album.title }}</h1>
+<p>{{ album.description }}</p>
+<h2>Images</h2>
+<a href="{% url 'album_list' %}">Back</a>
+<a href="{% url 'upload_image' album.id %}">Upload New Image</a>
+<a href="{% url 'delete_album' album.id %}">Delete</a>
+<a href="{% url 'page' album.id 1 %}">Open textbook</a>
+<div>
+    {% for image in album.images.all %}
+    <div>
+        <img src="{{ image.image.url }}" alt="{{ image.caption }}" style="width: 200px;">
+        <p>{{ image.caption }}</p>
+    </div>
+    {% empty %}
+        <p>No images available.</p>
+    {% endfor %}
+</div>
+<div>
+    <!-- Back button -->
+    {% if prev_page %}
+        <a href="{% url 'page' album.id prev_page %}">Back</a>
+    {% endif %}
+    
+    <!-- Forward button -->
+    {% if next_page %}
+        <a href="{% url 'page' album.id next_page %}">Forward</a>
+    {% endif %}
+</div>

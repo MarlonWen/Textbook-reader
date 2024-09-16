@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ album.title }} - Photo Viewer</title>
+    <link rel="stylesheet" href="{% static 'viewer/styles.css' %}">
+</head>
+<body>
+    <div class="photo-container">
+        <img src="{{ image.image.url }}" alt="Image">
+    </div>
+
+    <div class="navigation">
+        {% if prev_page %}
+            <a href="{% url 'page' album.id prev_page %}" class="nav-button">Previous</a>
+        {% endif %}
+        {% if next_page %}
+            <a href="{% url 'page' album.id next_page %}" class="nav-button">Next</a>
+        {% endif %}
+    </div>
+    <a href="{% url 'album_detail' album.id %}">Back</a>
+</body>
+</html>

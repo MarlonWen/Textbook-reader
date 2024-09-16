@@ -1,0 +1,9 @@
+{% load static %}
+<link href="{% static 'home/styles.css' %}" rel="stylesheet">
+<h1>Upload Image for {{ album.title }}</h1>
+<a href="{% url 'album_detail' album.id %}">Back</a>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
