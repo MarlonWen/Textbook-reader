@@ -1,132 +1,101 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 a {
     text-decoration: none;
-    font-size: 32px;
+    color: #007bff;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    color: #fcffd9; /* Light color for headings */
+a:hover {
+    text-decoration: underline;
 }
 
-form {
-    padding: 20px;
+/* Photo Container */
+.photo-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
 }
 
-button {
-    background-color: #007bff;
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.nav-button {
     padding: 10px 20px;
-    border: none;
+    background-color: #007bff;
+    color: white;
     border-radius: 5px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.nav-button:hover {
     background-color: #0056b3;
 }
 
-.container {
-    width: 30%; /* or any width you need */
-    margin: 0 auto; /* Horizontally center the container */
-}
-
-.flex-container {
-    display: flex; /* Enables Flexbox layout */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100px; /* Set a height if needed for centering */
-    background-color: #f0f0f0; /* Optional, for visibility */
-}
-
-.container2 {
-    position: relative;
-    left: 0%;
-    top: 15%;
-    display: grid;
-    margin: 0 auto; /* Center horizontally */
-    width: 80%; /* Adjust the width of the container */
-    max-width: 800px; /* Maximum width of the container */
-    height: 15%;
-    margin: 0 auto; /* Center the container horizontally */ 
-    place-items: center;
-}
-
-.container3 {
-    position: absolute;
-    left: 20%;
-    top: 35%;
-    display: grid;
-    margin: 0 auto; /* Center horizontally */
-    width: 80%; /* Adjust the width of the container */
-    max-width: 800px; /* Maximum width of the container */
-    height: 15%;
-    margin: 0 auto; /* Center the container horizontally */
-
-    place-items: center;
-}
-
-.container4 {
-    position: absolute;
-    left: 40%;
-    top: 35%;
-    display: grid;
-    margin: 0 auto; /* Center horizontally */
-    width: 80%; /* Adjust the width of the container */
-    max-width: 800px; /* Maximum width of the container */
-    height: 15%;
-    margin: 0 auto; /* Center the container horizontally */
-    place-items: center;
-}
-
-.green-button {
+/* Back Button */
+a[href] {
     display: inline-block;
-    padding: 20px 80px; /* Adjust the size of the button */
-    background-color: #28a745; /* Green color */
-    color: #fff; /* Text color */
-    border-radius: 12px; /* Rounded edges */
-    font-size: 22px; /* Font size */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Center the text */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.green-button:hover {
-    background-color: #218838; /* Darker green on hover */
+a[href]:hover {
+    background-color: #5a6268;
 }
 
-#createaccount {
-    padding: 40px 50px;
-    margin: 0;
-    z-index: 1;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+
+    .photo-container img {
+        max-width: 90%;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }
 
-#login {
-    padding: 40px 110px;
-    margin: 0;
-    z-index: 1;
-}
-
-#register {
-    position: absolute;
-    top: 20%;
-    font-size: 45px;
-}
-
-#center {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
