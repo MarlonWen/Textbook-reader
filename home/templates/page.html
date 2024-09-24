@@ -1,13 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ album.title }} - Photo Viewer</title>
     <link rel="stylesheet" href="{% static 'viewer/styles.css' %}">
 </head>
 <body>
     <div class="photo-container">
-        <img src="{{ image.image.url }}" alt="Image">
+        <img src="{{ image.image.url }}" alt="Image from {{ album.title }}">
     </div>
 
     <div class="navigation">
@@ -18,6 +20,7 @@
             <a href="{% url 'page' album.id next_page %}" class="nav-button">Next</a>
         {% endif %}
     </div>
-    <a href="{% url 'album_detail' album.id %}">Back</a>
+
+    <a href="{% url 'album_detail' album.id %}" class="back-button">Back to Album</a>
 </body>
 </html>
