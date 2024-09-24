@@ -1,5 +1,5 @@
 {% load static %}
-<link href="{% static 'home/styles.css' %}" rel="stylesheet">
+<link href="{% static 'home/album_list.css' %}" rel="stylesheet">
 <h1>My textbooks</h1>
 <a href="{% url 'create_album' %}">Add New Textbook</a>
 <a href="{% url 'home' username=request.user.username %}">Back to Home</a>
