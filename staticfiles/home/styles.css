@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #fcffd9; /* Light color for headings */
+}
+
+form {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    width: 30%; /* or any width you need */
+    margin: 0 auto; /* Horizontally center the container */
+}
+
+.flex-container {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100px; /* Set a height if needed for centering */
+    background-color: #f0f0f0; /* Optional, for visibility */
+}
+
+.container2 {
+    position: relative;
+    left: 0%;
+    top: 15%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */ 
+    place-items: center;
+}
+
+.container3 {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */
+
+    place-items: center;
+}
+
+.container4 {
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */
+    place-items: center;
+}
+
+.green-button {
+    display: inline-block;
+    padding: 20px 80px; /* Adjust the size of the button */
+    background-color: #28a745; /* Green color */
+    color: #fff; /* Text color */
+    border-radius: 12px; /* Rounded edges */
+    font-size: 22px; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.green-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+#createaccount {
+    padding: 40px 50px;
+    margin: 0;
+    z-index: 1;
+}
+
+#login {
+    padding: 40px 110px;
+    margin: 0;
+    z-index: 1;
+}
+
+#register {
+    position: absolute;
+    top: 20%;
+    font-size: 45px;
+}
+
+#center {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
