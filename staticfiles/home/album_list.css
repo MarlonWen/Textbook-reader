@@ -1,0 +1,48 @@
+/* General Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff; /* White heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #bb86fc; /* Purple links */
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+a:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    margin: 10px 0; /* Spacing between list items */
+}
+
+.no-textbooks {
+    color: #ff5252; /* Red color for no textbooks message */
+    font-weight: bold; /* Bold text */
+}
+
+/* Navigation Links */
+.navigation {
+    margin-top: 20px; /* Space above navigation links */
+    margin-bottom: 20px; /* Space below navigation links */
+}
