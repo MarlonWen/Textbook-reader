@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container Styles */
+.container2 {
+    text-align: center; /* Center text in container */
+    margin-bottom: 30px; /* Space below the welcome message */
+}
+
+h1 {
+    font-size: 2.5em; /* Large heading size */
+    margin: 0; /* Remove default margin */
+    color: #ffffff; /* White heading */
+}
+
+p {
+    font-size: 1.2em; /* Slightly larger paragraph text */
+    margin-top: 10px; /* Space above paragraph */
+}
+
+/* Button Styles */
+.green-button {
+    background-color: #4caf50; /* Green button background */
+    color: white; /* White text color */
+    padding: 15px 30px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2em; /* Button text size */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.green-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller heading on smaller screens */
+    }
+
+    p {
+        font-size: 1em; /* Smaller paragraph text on smaller screens */
+    }
+
+    .green-button {
+        padding: 12px 25px; /* Smaller button padding on smaller screens */
+        font-size: 1em; /* Smaller button text on smaller screens */
+    }
+}
