@@ -56,7 +56,7 @@ p {
     }
 
     .green-button {
-        padding: 12px 25px; /* Smaller button padding on smaller screens */
+        padding: 20px 35px; /* Smaller button padding on smaller screens */
         font-size: 1em; /* Smaller button text on smaller screens */
     }
 }
