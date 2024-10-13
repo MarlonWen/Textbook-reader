@@ -62,8 +62,8 @@ p {
 }
 
 #createaccount {
-    position: absolute;
-    top: 60%;
-    left: 40%;
+    margin-top: 20px; /* Add some space above the button if needed */
+    align-self: center; /* Center the button horizontally */
 }
+
     
