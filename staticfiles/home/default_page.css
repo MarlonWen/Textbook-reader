@@ -33,7 +33,7 @@ p {
 .green-button {
     background-color: #4caf50; /* Green button background */
     color: white; /* White text color */
-    padding: 15px 30px; /* Button padding */
+    padding: 45px 45px; /* Button padding */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline from links */
