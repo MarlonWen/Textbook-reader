@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'home/login.css' %}">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <!-- Add Django's form -->
+            <form method="post">
+                {% csrf_token %}
+                <h2>Login</h2>
+                
+                <!-- Username Field -->
+                <div class="input-group">
+                    {{ form.username }}
+                    <label for="id_username">Username</label>
+                </div>
+                
+                <!-- Password Field -->
+                <div class="input-group">
+                    {{ form.password }}
+                    <label for="id_password">Password</label>
+                </div>
+                
+                
+                
+                <button type="submit">Login</button>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="{% url 'register' %}" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

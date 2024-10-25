@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ album.title }} - Photo Viewer</title>
+    <link rel="stylesheet" href="{% static 'home/page.css' %}">
+</head>
+<body>
+
+    <div class="photo-container">
+        <img src="{{ image.image.url }}" alt="Image from {{ album.title }}">
+        {% if prev_page %}
+        <a href="{% url 'page' album.id prev_page %}" >
+            <div class="prevbox"></div>
+        </a>
+        {% endif %}
+        {% if next_page %}
+        <a href="{% url 'page' album.id next_page %}" >
+            <div class="nextbox"></div>
+        </a>
+        {% endif %}
+        <div class="navigation">
+            <a href="{% url 'album_detail' album.id %}" >
+                <img src="{% static 'home/images/back.png' %}" id="back">
+            </a>
+            {% if prev_page %}
+                <a href="{% url 'page' album.id prev_page %}" >
+                    <img src="{% static 'home/images/prev.png' %}" id="prev">
+                </a>
+            {% endif %}
+            {% if next_page %}
+                <a href="{% url 'page' album.id next_page %}" >
+                    <img src="{% static 'home/images/next.png' %}" id="next">
+                </a>
+            {% endif %}
+            <p id="num"> Page: {{page_number}} / {{max_page_number}}</p>
+            <form method="GET" action="{% url 'go_to_album_page' album.id %}">
+                <label></label>
+                <input type="number" id="page-number" name="page_number" min="1" required>
+                
+            </form>
+              
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+html {
+    background-color: #121212;
+}
+.photo-container {
+    position: relative;
+    display:inline-block;
+    left: 50vw;
+    top:50vh;
+    transform: translate(-50%, -50%);
+    background-color: #121212;
+    
+}
+
+img {
+    width: 105%;
+    height: auto;
+    
+}
+
+.navigation {
+    position: absolute;
+    bottom: -1%;
+    width: 105%;
+    height: 35px;
+    background-color: rgb(54, 54, 54);
+    z-index: 1;
+    
+}
+
+#back {
+    width: 31px;
+    height: auto;
+    position:absolute;
+    top: 50%;
+    left:0.5%;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+#prev {
+    width: 21px;
+    height: auto;
+    position:absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+#next {
+    width: 22px;
+    height: auto;
+    position:absolute;
+    top: 50%;
+    left: 53.5%;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+#num {
+    color: white;
+    position:absolute;
+    left: 90%;
+    top: 50%;
+    transform: translate(0, -135%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-number {
+    width:5%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Removes the arrows */
+    margin: 0; /* Ensures no margin is applied */
+}
+
+.prevbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 45%;
+}
+
+.nextbox {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    z-index: 1;
+    height: 100%;
+    width: 45%;
+}

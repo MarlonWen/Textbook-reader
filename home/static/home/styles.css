@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #050503; /* Light color for headings */
+}
+
+form {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 30%; /* or any width you need */
+    margin: 0 auto; /* Horizontally center the container */
+}
+
+.flex-container {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100px; /* Set a height if needed for centering */
+    background-color: #131010; /* Optional, for visibility */
+}
+
+.container2 {
+    position: relative;
+    left: 0%;
+    top: 15%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */ 
+    place-items: center;
+}
+
+.container3 {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */
+
+    place-items: center;
+}
+
+.container4 {
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    display: grid;
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust the width of the container */
+    max-width: 800px; /* Maximum width of the container */
+    height: 15%;
+    margin: 0 auto; /* Center the container horizontally */
+    place-items: center;
+}
+
+
+#createaccount {
+    padding: 40px 50px;
+    margin: 0;
+    z-index: 1;
+}
+
+#login {
+    padding: 40px 110px;
+    margin: 0;
+    z-index: 1;
+}
+
+#register {
+    position: absolute;
+    top: 20%;
+    font-size: 45px;
+}
+
+#center {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* button */
+.btn {
+    margin: 100px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #050303;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+/* glow */
+.btn::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+/* hover */
+.btn:hover::before {
+    opacity: 1;
+  }
+  
+.btn:active:after {
+    background: transparent;
+  }
+  
+.btn:active {
+    color: #000;
+    font-weight: bold;
+  }
