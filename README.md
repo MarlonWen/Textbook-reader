@@ -6,4 +6,4 @@ Website may take 50 seconds to load since I am on an onrender free account:
 
 24/09/24 - Updated CSS styling to make the website look better
 
-25/10/2040 - Added new features: click left and right side of the screen for easy navigation and type the page number you wish to go to
+25/10/24 - Added new features: click left and right side of the screen for easy navigation and type the page number you wish to go to
